@@ -127,7 +127,20 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
+function divider(arr){
+  var evens = [];
+  var odds = [];
 
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] % 2 === 0){
+      evens.push(arr[i]);
+    }else if (arr[i] % 2 !== 0){
+      odds.push(arr[i]);
+    }
+  }
+  var result = [evens, odds];
+  return result;
+}
 
 
 ////////// PROBLEM 7 //////////
@@ -148,7 +161,20 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
+function finder(arr){
+  var num = getRandomArbitrary();
 
+  var flag = false; 
+
+  for(let i = 0; i < arr.length; i++){
+    if(num === arr[i]){
+    flag = true;    
+    }else{
+      flag = false;
+    }
+  }
+  return flag; 
+}
 
 
 ////////// PROBLEM 8 //////////
@@ -187,7 +213,14 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+function maker(){
+  let arr = [];
 
+  for (let i =1; i < 216; i++){
+    arr.push(i);
+  }
+  return arr;
+}
 
 
 ////////// PROBLEM 10 //////////
@@ -203,7 +236,13 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
+function addTen (numbers){
 
+let array = numbers.map(elem => {
+  return parseInt(elem) + 10;
+});
+return array;
+};
 
 
 ////////// PROBLEM 11 //////////
@@ -229,7 +268,13 @@ for(var i = 0; i < num2; i++){
 
 //Code Here
 
-
+function longer(arr1, arr2){
+    if(arr1.length > arr2.length){
+      return arr1;
+    }else if(arr2.length > arr1.length){
+      return arr2;
+    }
+  }
 
 /*
   As a continuation of the previous problem, write another function called 'both'.
@@ -240,7 +285,18 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
+function both(arr1, arr2){
+  let result = [];
 
+  for(let i = 0; i < arr1.length; i++){
+    for(let z =0; z < arr2.length; z++){
+      if(arr2[z] === arr1[i]){
+        result.push(arr1[i]);
+      }
+    }
+  }
+  return result; 
+}
 
 
 ////////// PROBLEM 12 //////////
